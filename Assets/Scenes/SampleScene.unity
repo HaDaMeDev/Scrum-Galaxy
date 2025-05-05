@@ -927,7 +927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: "\xA1Hola, soy un NPC1!"
   dialogueUI: {fileID: 3621306}
-  newSceneName: Mundo1
+  newSceneName: Mundo4
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,7 +2013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: "\xA1Hola, soy un NPC3!"
   dialogueUI: {fileID: 3621306}
-  newSceneName: Mundo3
+  newSceneName: Mundo2
 --- !u!1 &1778043284
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,7 +2273,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: "\xA1Hola, soy un NPC2!"
   dialogueUI: {fileID: 3621306}
-  newSceneName: Mundo2
+  newSceneName: Mundo3
 --- !u!1 &2130001147
 GameObject:
   m_ObjectHideFlags: 0
