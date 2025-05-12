@@ -6,79 +6,75 @@ public class ControlsDisplay : MonoBehaviour
     [Header("Configuración")]
     [Tooltip("Tecla para mostrar/ocultar los controles")]
     public KeyCode toggleKey = KeyCode.F1;
-    
+
     [Tooltip("Color de fondo del panel")]
-    public Color backgroundColor = new Color(0, 0, 0, 0.8f);
-    
+    public Color backgroundColor = new Color(0, 0, 0, 1f); // Fondo negro opaco
+
     [Tooltip("Color del texto")]
     public Color textColor = Color.white;
-    
+
     [Header("Textos")]
     [Tooltip("Título de la pantalla de controles")]
     public string titleText = "CONTROLES DEL JUEGO";
-    
+
     [Tooltip("Mensaje de cómo volver al juego (dejar vacío para no mostrar)")]
     public string returnMessage = "Presiona cualquier tecla para volver";
-    
+
     [Header("Apariencia")]
-    [Tooltip("Tamaño del título")]
-    public int titleFontSize = 36;
-    
-    [Tooltip("Tamaño del texto de los controles")]
-    public int controlsFontSize = 24;
-    
-    [Tooltip("Tamaño del texto del mensaje")]
-    public int messageTextSize = 24;
-    
-    [Tooltip("Tamaño de los iconos de teclas")]
+    [Tooltip("Tamaño base del título (escalará con resolución)")]
+    public int titleFontSize = 48;
+
+    [Tooltip("Tamaño base del texto de los controles (escalará con resolución)")]
+    public int controlsFontSize = 32;
+
+    [Tooltip("Tamaño base del texto del mensaje (escalará con resolución)")]
+    public int messageTextSize = 32;
+
+    [Tooltip("Tamaño base de los iconos de teclas (escalará con resolución)")]
     public Vector2 keyIconSize = new Vector2(64, 64);
-    
-    [Tooltip("Margen del panel respecto a los bordes de la pantalla")]
-    public int panelMargin = 20;
-    
+
+    [Tooltip("Margen del panel como porcentaje de la pantalla (0-1)")]
+    [Range(0f, 0.1f)]
+    public float panelMarginPercent = 0.02f;
+
     [Tooltip("Controles por fila (2 para dos columnas)")]
     public int controlsPerRow = 2;
-    
+
     [System.Serializable]
     public class ControlBinding
     {
         public string action;
         public Sprite keyIcon;
     }
-    
+
     [Header("Controles")]
     [Tooltip("Lista de acciones y sus teclas asociadas")]
     public List<ControlBinding> controlBindings = new List<ControlBinding>();
-    
+
     private bool showControls = false;
     private GUIStyle titleStyle;
     private GUIStyle textStyle;
     private GUIStyle messageStyle;
     private Rect windowRect;
-    
+
     private void Awake()
     {
-        // Inicializar componentes
         InitializeControls();
         ConfigureStyles();
         UpdateWindowRect();
     }
-    
+
     private void Start()
     {
-        // Inicializar con valor por defecto si está vacío
         if (string.IsNullOrEmpty(titleText))
         {
             titleText = "CONTROLES DEL JUEGO";
         }
-        
-        // Debug para verificar que el script se está ejecutando
         Debug.Log("ControlsDisplay iniciado. Presiona " + toggleKey + " para mostrar los controles.");
     }
-    
+
     private void InitializeControls()
     {
-        // Inicializar con los controles de movimiento con flechas si la lista está vacía
         if (controlBindings.Count == 0)
         {
             controlBindings.Add(new ControlBinding { action = "Mover arriba", keyIcon = null });
@@ -89,86 +85,83 @@ public class ControlsDisplay : MonoBehaviour
             controlBindings.Add(new ControlBinding { action = "Cerrar Juego", keyIcon = null });
         }
     }
-    
+
     private void ConfigureStyles()
     {
-        // Configurar el estilo del título
+        float scaleFactor = Screen.height / 1080f; // Escala basada en una resolución de referencia (1080p)
+
         titleStyle = new GUIStyle();
-        titleStyle.fontSize = titleFontSize;
+        titleStyle.fontSize = Mathf.RoundToInt(titleFontSize * scaleFactor);
         titleStyle.normal.textColor = textColor;
         titleStyle.alignment = TextAnchor.MiddleCenter;
         titleStyle.fontStyle = FontStyle.Bold;
-        
-        // Configurar el estilo del texto
+
         textStyle = new GUIStyle();
-        textStyle.fontSize = controlsFontSize;
+        textStyle.fontSize = Mathf.RoundToInt(controlsFontSize * scaleFactor);
         textStyle.normal.textColor = textColor;
         textStyle.alignment = TextAnchor.MiddleLeft;
         textStyle.padding = new RectOffset(10, 10, 5, 5);
-        
-        // Configurar el estilo del mensaje
+
         messageStyle = new GUIStyle();
-        messageStyle.fontSize = messageTextSize;
+        messageStyle.fontSize = Mathf.RoundToInt(messageTextSize * scaleFactor);
         messageStyle.normal.textColor = textColor;
         messageStyle.alignment = TextAnchor.MiddleCenter;
-        messageStyle.fontStyle = FontStyle.Bold; // Más visible
+        messageStyle.fontStyle = FontStyle.Bold;
     }
-    
+
     private void UpdateWindowRect()
     {
-        // Configurar el rectángulo de la ventana para que ocupe toda la pantalla
+        float margin = Screen.width * panelMarginPercent;
         windowRect = new Rect(
-            panelMargin,
-            panelMargin,
-            Screen.width - (panelMargin * 2),
-            Screen.height - (panelMargin * 2)
+            margin,
+            margin,
+            Screen.width - (margin * 2),
+            Screen.height - (margin * 2)
         );
     }
-    
+
     private void Update()
     {
-        // Comprobar si se ha pulsado la tecla para mostrar/ocultar los controles
         if (Input.GetKeyDown(toggleKey))
         {
             showControls = !showControls;
             Debug.Log("Controles: " + (showControls ? "Mostrando" : "Ocultando"));
         }
-        
-        // Si los controles están visibles y se presiona CUALQUIER tecla (excepto la que ya verificamos)
+
         if (showControls && Input.anyKeyDown && !Input.GetKeyDown(toggleKey))
         {
             showControls = false;
             Debug.Log("Ocultando controles por presionar otra tecla");
         }
     }
-    
+
     private void OnGUI()
     {
-        // Actualizar el tamaño de la ventana en caso de que la pantalla cambie de tamaño
-        if (windowRect.width != Screen.width - (panelMargin * 2) || 
-            windowRect.height != Screen.height - (panelMargin * 2))
+        if (windowRect.width != Screen.width - (Screen.width * panelMarginPercent * 2) ||
+            windowRect.height != Screen.height - (Screen.height * panelMarginPercent * 2))
         {
             UpdateWindowRect();
         }
-        
-        // Actualizar estilos en caso de que se hayan modificado los parámetros
+
         ConfigureStyles();
-        
+
         if (showControls)
         {
-            // Dibujar un fondo semi-transparente que cubra toda la pantalla
             GUI.color = backgroundColor;
             GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "");
             GUI.color = Color.white;
-            
-            // Calcular la altura disponible para los controles
-            float totalHeight = Screen.height;
-            float titleHeight = 150; // Espacio para el título
-            float returnMessageHeight = 80; // Espacio para el mensaje de retorno
-            float controlsHeight = totalHeight - titleHeight - returnMessageHeight;
-            
-            // Dibujar el título
-            GUILayout.BeginArea(new Rect(0, 0, Screen.width, titleHeight));
+
+            float titleHeightPercent = 0.1f; // Reducido para bajar el contenido
+            float controlsHeightPercent = 0.7f;
+            float returnMessageHeightPercent = 0.1f; // Reducido para bajar el contenido
+            float topPaddingPercent = 0.1f; // Espacio adicional en la parte superior para centrar
+
+            float topPadding = Screen.height * topPaddingPercent;
+            float titleHeight = Screen.height * titleHeightPercent;
+            float controlsHeight = Screen.height * controlsHeightPercent;
+            float returnMessageHeight = Screen.height * returnMessageHeightPercent;
+
+            GUILayout.BeginArea(new Rect(0, topPadding, Screen.width, titleHeight));
             GUILayout.FlexibleSpace();
             GUILayout.BeginHorizontal();
             GUILayout.FlexibleSpace();
@@ -177,65 +170,45 @@ public class ControlsDisplay : MonoBehaviour
             GUILayout.EndHorizontal();
             GUILayout.FlexibleSpace();
             GUILayout.EndArea();
-            
-            // Dibujar los controles
-            GUILayout.BeginArea(new Rect(0, titleHeight, Screen.width, controlsHeight));
-            
-            // Organizar controles en filas
+
+            GUILayout.BeginArea(new Rect(0, topPadding + titleHeight, Screen.width, controlsHeight));
             for (int i = 0; i < controlBindings.Count; i += controlsPerRow)
             {
                 GUILayout.BeginHorizontal();
                 GUILayout.FlexibleSpace();
-                
-                // Mostrar controles en esta fila (máximo 'controlsPerRow' controles)
                 for (int j = 0; j < controlsPerRow && i + j < controlBindings.Count; j++)
                 {
                     var control = controlBindings[i + j];
-                    
-                    // Un grupo para cada control
-                    GUILayout.BeginVertical(GUILayout.Width(300));
-                    
-                    // Mostrar la acción
+                    GUILayout.BeginVertical(GUILayout.Width(Screen.width / controlsPerRow * 0.9f));
                     GUILayout.BeginHorizontal();
                     GUILayout.FlexibleSpace();
                     GUILayout.Label(control.action, textStyle);
                     GUILayout.Label(" : ", textStyle, GUILayout.Width(20));
-                    
-                    // Mostrar el icono si existe
                     if (control.keyIcon != null)
                     {
-                        Rect iconRect = GUILayoutUtility.GetRect(keyIconSize.x, keyIconSize.y);
+                        float iconScale = Screen.height / 1080f;
+                        Rect iconRect = GUILayoutUtility.GetRect(keyIconSize.x * iconScale, keyIconSize.y * iconScale);
                         GUI.DrawTexture(iconRect, control.keyIcon.texture, ScaleMode.ScaleToFit);
                     }
                     else
                     {
-                        // Espacio reservado para el icono
-                        GUILayoutUtility.GetRect(keyIconSize.x, keyIconSize.y);
+                        GUILayoutUtility.GetRect(keyIconSize.x * (Screen.height / 1080f), keyIconSize.y * (Screen.height / 1080f));
                     }
                     GUILayout.FlexibleSpace();
                     GUILayout.EndHorizontal();
-                    
                     GUILayout.EndVertical();
-                    
-                    // Espacio entre controles en la misma fila
                     GUILayout.Space(20);
                 }
-                
                 GUILayout.FlexibleSpace();
                 GUILayout.EndHorizontal();
-                
-                // Espacio entre filas
                 GUILayout.Space(40);
             }
-            
             GUILayout.EndArea();
-            
-            // Dibujar el mensaje de retorno en un área específica en la parte inferior
+
             if (!string.IsNullOrEmpty(returnMessage))
             {
-                Rect messageRect = new Rect(0, Screen.height - returnMessageHeight, Screen.width, returnMessageHeight);
-                GUI.Box(messageRect, "", new GUIStyle()); // Contenedor invisible para el mensaje
-                
+                Rect messageRect = new Rect(0, Screen.height - returnMessageHeight - topPadding, Screen.width, returnMessageHeight);
+                GUI.Box(messageRect, "", new GUIStyle());
                 GUILayout.BeginArea(messageRect);
                 GUILayout.FlexibleSpace();
                 GUILayout.BeginHorizontal();
