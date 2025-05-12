@@ -3074,7 +3074,7 @@ MonoBehaviour:
   exitKey: 27
   showDebugMessage: 1
   targetSceneName: SampleScene
-  returnKey: 109
+  returnKey: 32
   speed: 10
 --- !u!4 &1353167869 stripped
 Transform:
