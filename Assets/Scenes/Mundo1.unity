@@ -798,7 +798,7 @@ GameObject:
   - component: {fileID: 266015335}
   - component: {fileID: 266015334}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Consultar Controles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
