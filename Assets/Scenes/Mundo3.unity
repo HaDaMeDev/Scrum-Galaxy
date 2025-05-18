@@ -607,7 +607,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueAudio: {fileID: 8300000, guid: b8e136bec51afb249b3ea83cdd8c65c4, type: 3}
   triggerDistance: 7
-  subtitleLines: []
+  subtitleLines:
+  - text: "La Sprint Review marca el pen\xFAltimo momento clave del sprint,"
+    startTime: 0
+    duration: 3.84
+  - text: "celebr\xE1ndose el \xFAltimo d\xEDa con una duraci\xF3n que puede extenderse "
+    startTime: 3.84
+    duration: 3.08
+  - text: hasta cuatro horas en ciclos mensuales.
+    startTime: 6.92
+    duration: 3.36
+  - text: Es un espacio para inspeccionar el incremento construido,
+    startTime: 10.28
+    duration: 2.465
+  - text: "no solo evaluando si se cumpli\xF3 un objetivo, sino revisando el producto"
+    startTime: 12.745
+    duration: 4.535
+  - text: funcional frente a los interesados.
+    startTime: 17.28
+    duration: 2.84
+  - text: "Aqu\xED se muestra lo que realmente se ha terminado, seg\xFAn la definici\xF3n
+      de done, "
+    startTime: 20.12
+    duration: 4.24
+  - text: "y se recoge retroalimentaci\xF3n valiosa que permitir\xE1 ajustar el product"
+    startTime: 24.36
+    duration: 4.92
+  - text: backlog y planear los siguientes pasos.
+    startTime: 29.28
+    duration: 2.96
+  - text: 'No se trata de hacer presentaciones formales, sino de permitir que el
+      cliente '
+    startTime: 32.24
+    duration: 3.88
+  - text: vea, toque y pruebe lo desarrollado.
+    startTime: 36.12
+    duration: 3.88
+  - text: "Aunque suele hacerse en una sola sesi\xF3n, puede dividirse en varias
+      revisiones "
+    startTime: 40
+    duration: 4.44
+  - text: 'a medida que se completan funcionalidades durante el sprint. '
+    startTime: 44.4
+    duration: 5
 --- !u!1 &392055677
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,7 +986,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueAudio: {fileID: 8300000, guid: ab8106ec5512712488db5989eaaa83d8, type: 3}
   triggerDistance: 20
-  subtitleLines: []
+  subtitleLines:
+  - text: La Sprint Planning marca el inicio de cada sprint y sienta las bases
+    startTime: 0
+    duration: 4.84
+  - text: 'del trabajo a realizar. '
+    startTime: 4.84
+    duration: 1.84
+  - text: "Se trata de una reuni\xF3n clave que dura entre 2 y 4 horas,"
+    startTime: 6.68
+    duration: 4.36
+  - text: "hasta 8 si el sprint es mensual, donde todo el equipo Scrum se re\xFAne
+      para"
+    startTime: 11.04
+    duration: 5.36
+  - text: definir el objetivo del sprint y seleccionar desde el Product Backlog
+    startTime: 16.4
+    duration: 4.52
+  - text: "los elementos que se abordar\xE1n. "
+    startTime: 20.92
+    duration: 2.32
+  - text: "Durante esta planificaci\xF3n, los developers estiman el esfuerzo"
+    startTime: 23.24
+    duration: 3.52
+  - text: "requerido, eval\xFAan su capacidad y consideran la velocidad del equipo
+      en "
+    startTime: 26.76
+    duration: 5.16
+  - text: sprints anteriores para establecer un plan realista.
+    startTime: 31.92
+    duration: 4
+  - text: "Las historias de usuario se descomponen en tareas concretas, generalmente
+      de un d\xEDa, "
+    startTime: 35.92
+    duration: 6.2
+  - text: organizadas de la forma que mejor se adapte al equipo.
+    startTime: 42.12
+    duration: 3.72
+  - text: "As\xED, el sprint arranca con una visi\xF3n clara,"
+    startTime: 45.84
+    duration: 3.96
+  - text: "un objetivo com\xFAn y un camino definido hacia el pr\xF3ximo incremento
+      del producto."
+    startTime: 49.9
+    duration: 5
 --- !u!1001 &695567956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1174,7 +1259,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueAudio: {fileID: 8300000, guid: cb1b3dcbedddc3c498a3c5647b811a0a, type: 3}
   triggerDistance: 7
-  subtitleLines: []
+  subtitleLines:
+  - text: 'En Scrum, el incremento es el resultado concreto del trabajo realizado '
+    startTime: 0
+    duration: 4.16
+  - text: "durante el sprint, una porci\xF3n funcional del producto"
+    startTime: 4.16
+    duration: 3.32
+  - text: "que cumple con la definici\xF3n determinado y est\xE1 lista para ser utilizada,"
+    startTime: 7.48
+    duration: 4.72
+  - text: 'aunque no siempre se entregue de inmediato al cliente. '
+    startTime: 12.2
+    duration: 3.44
+  - text: Puede haber varios incrementos dentro de un mismo sprint, pero al menos
+    startTime: 15.64
+    duration: 4.72
+  - text: uno debe estar finalizado al cierre.
+    startTime: 20.36
+    duration: 2.52
+  - text: Esta entrega combina dos enfoques.
+    startTime: 22.88
+    duration: 3.2
+  - text: Es iterativa porque se repite en cada sprint e incremental,
+    startTime: 26.08
+    duration: 5.12
+  - text: porque cada parte nueva se construye sobre las anteriores, agregando valor
+      continuo.
+    startTime: 31.2
+    duration: 6
+  - text: Aunque se presenta oficialmente durante la sprint review,
+    startTime: 37.2
+    duration: 3.96
+  - text: el verdadero poder del incremento radica en su disponibilidad inmediata.
+    startTime: 41.16
+    duration: 5.16
+  - text: "Puede liberarse tan pronto como est\xE9 listo, sin depender de reuniones
+      formales."
+    startTime: 46.32
+    duration: 5
 --- !u!1 &884684273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,7 +1799,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueAudio: {fileID: 8300000, guid: d39190e0ac793744eb89d29ec5cc1ee2, type: 3}
   triggerDistance: 7
-  subtitleLines: []
+  subtitleLines:
+  - text: "El sprint en Scrum es el coraz\xF3n del desarrollo \xE1gil, "
+    startTime: 0
+    duration: 3.96
+  - text: "un ciclo constante de duraci\xF3n fija de una a m\xE1ximo cuatro semanas"
+    startTime: 3.96
+    duration: 5.28
+  - text: "que act\xFAa como contenedor de todos los eventos del marco."
+    startTime: 9.24
+    duration: 4.04
+  - text: Inicia justo al terminar el anterior, marcando un ritmo estable
+    startTime: 13.28
+    duration: 4.4
+  - text: que promueve la previsibilidad.
+    startTime: 17.68
+    duration: 2.68
+  - text: Cada sprint nace con un objetivo claro, construido a partir del Product
+      Backlog,
+    startTime: 20.36
+    duration: 5.84
+  - text: "que se transforma en un Sprint Backlog con un objetivo claro que gu\xEDa
+      al equipo "
+    startTime: 26.2
+    duration: 4.88
+  - text: y permite inspeccionar y adaptar el progreso hacia la meta del producto.
+    startTime: 31.08
+    duration: 4.96
+  - text: Si es muy largo, se corre el riesgo de perder enfoque y aumentar la complejidad.
+    startTime: 36.04
+    duration: 6.72
+  - text: Si es corto, se gana en aprendizaje, se reduce en riesgos y se
+    startTime: 42.76
+    duration: 4.76
+  - text: controla mejor el esfuerzo.
+    startTime: 47.76
+    duration: 2.32
+  - text: 'Cualquier cambio durante el sprint debe ser acordado entre el product
+      owner '
+    startTime: 49.84
+    duration: 4.4
+  - text: y el equipo de desarrollo, siempre protegiendo el objetivo trazado.
+    startTime: 54.24
+    duration: 5.48
+  - text: En casos excepcionales, el sprint puede cancelarse,
+    startTime: 59.72
+    duration: 4.16
+  - text: "pero solo si su objetivo pierde validez, y esta decisi\xF3n recae"
+    startTime: 63.88
+    duration: 4.44
+  - text: exclusivamente en el product owner.
+    startTime: 68.32
+    duration: 5
 --- !u!1 &1094509363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1956,7 +2130,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueAudio: {fileID: 8300000, guid: dce2f6c1d2037124caa12a61ccd4aaf2, type: 3}
   triggerDistance: 7
-  subtitleLines: []
+  subtitleLines:
+  - text: En el mundo de Scrum, los eventos o ceremonias marcan
+    startTime: 0
+    duration: 3.6
+  - text: el ritmo del trabajo colaborativo.
+    startTime: 3.6
+    duration: 2.4
+  - text: 'Cada sprint se convierte en un contenedor que da estructura y cadencia '
+    startTime: 6
+    duration: 4.16
+  - text: al desarrollo, agrupando en su interior momentos clave para planear,
+    startTime: 10.16
+    duration: 4.72
+  - text: inspeccionar y adaptar.
+    startTime: 14.88
+    duration: 2.24
+  - text: "Desde la sprint planning, donde se define qu\xE9 se va a construir,"
+    startTime: 17.32
+    duration: 3.76
+  - text: pasando por los encuentros diarios, daily, que permiten ajustar el rumbo,
+    startTime: 20.88
+    duration: 4.72
+  - text: 'hasta llegar a la sprint review y la sprint retrospective, '
+    startTime: 25.6
+    duration: 3.56
+  - text: 'donde el equipo producto como su forma de trabajar, cada ceremonia '
+    startTime: 29.16
+    duration: 4.96
+  - text: "cumple un prop\xF3sito esencial."
+    startTime: 34.12
+    duration: 2.32
+  - text: 'Todas ellas convergen hacia un resultado tangible: el incremento, la entrega '
+    startTime: 36.44
+    duration: 5.4
+  - text: de valor real al final del sprint.
+    startTime: 41.84
+    duration: 5
 --- !u!82 &1286289793
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2494,7 +2704,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueAudio: {fileID: 8300000, guid: 24c44998d7d4989469b99931d36faa1e, type: 3}
   triggerDistance: 7
-  subtitleLines: []
+  subtitleLines:
+  - text: La Sprint Retrospective es el cierre reflexivo del sprint,
+    startTime: 0
+    duration: 4.04
+  - text: "una reuni\xF3n privada del equipo Scrum, sin clientes, con una duraci\xF3n
+      m\xE1xima"
+    startTime: 4.04
+    duration: 4.8
+  - text: 'de tres horas para sprints mensuales. '
+    startTime: 8.84
+    duration: 2.24
+  - text: "En un ambiente seguro y positivo, se promueve la expresi\xF3n sincera
+      para"
+    startTime: 11.08
+    duration: 4.08
+  - text: "revisar lo vivido, qu\xE9 funcion\xF3, qu\xE9 no y c\xF3mo mejorar. "
+    startTime: 15.16
+    duration: 4.44
+  - text: "No se busca se\xF1alar culpables, sino detectar oportunidades de crecimiento."
+    startTime: 19.6
+    duration: 4.6
+  - text: 'Se inspeccionan herramientas, relaciones, personas y procesos, identificando
+      ajustes '
+    startTime: 24.2
+    duration: 5.12
+  - text: "\xFAtiles para elevar la calidad y efectividad del equipo. "
+    startTime: 29.32
+    duration: 3.4
+  - text: "De esa reflexi\xF3n, surge un plan de acci\xF3n concreto que puede incluirse"
+    startTime: 32.72
+    duration: 3.76
+  - text: "en el pr\xF3ximo Sprint Backlog."
+    startTime: 36.48
+    duration: 2.36
+  - text: "La din\xE1mica suele seguir cinco pasos: preparar el escenario, recolectar
+      datos,"
+    startTime: 38.84
+    duration: 5.04
+  - text: "reflexionar, decidir qu\xE9 hacer y cerrar la sesi\xF3n con claridad y
+      compromiso."
+    startTime: 43.88
+    duration: 6
 --- !u!1 &1543303655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,7 +3107,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueAudio: {fileID: 8300000, guid: f6681d18aab40914a94c0db18b298e11, type: 3}
   triggerDistance: 7
-  subtitleLines: []
+  subtitleLines:
+  - text: "Cada d\xEDa del sprint comienza con un breve y enfocado encuentro de 15
+      minutos."
+    startTime: 0
+    duration: 5
+  - text: El Daily Scrum.
+    startTime: 5
+    duration: 1.84
+  - text: En este espacio exclusivo para el equipo de desarrollo,
+    startTime: 6.84
+    duration: 3.92
+  - text: "se revisa el avance del trabajo, se exponen obst\xE1culos y se ajusta"
+    startTime: 10.76
+    duration: 4.72
+  - text: la estrategia para alcanzar el objetivo del sprint.
+    startTime: 15.48
+    duration: 3.72
+  - text: 'Siempre se realiza a la misma hora y en el mismo lugar, '
+    startTime: 19.2
+    duration: 3.96
+  - text: promoviendo ritmo y consistencia.
+    startTime: 23.16
+    duration: 2.92
+  - text: No se trata solo de informar, sino de inspeccionar el progreso real
+    startTime: 26.08
+    duration: 4.24
+  - text: y adaptar el plan si es necesario.
+    startTime: 30.32
+    duration: 3.84
+  - text: "Este momento diario fortalece la comunicaci\xF3n,"
+    startTime: 34.16
+    duration: 3.72
+  - text: acelera la toma de decisiones y reduce la necesidad de otras reuniones.
+    startTime: 37.88
+    duration: 5.88
+  - text: "Aunque es el punto de coordinaci\xF3n principal, los developers suelen"
+    startTime: 43.76
+    duration: 4.6
+  - text: "interactuar durante el d\xEDa para profundizar discusiones"
+    startTime: 48.36
+    duration: 3.76
+  - text: y refinar el camino a seguir.
+    startTime: 52.12
+    duration: 5
 --- !u!1 &1987178365
 GameObject:
   m_ObjectHideFlags: 0
