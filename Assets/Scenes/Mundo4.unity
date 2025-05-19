@@ -514,7 +514,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueAudio: {fileID: 8300000, guid: cf13ad232a10e744984ce4c4c9330b29, type: 3}
   triggerDistance: 7
-  subtitleLines: []
+  subtitleLines:
+  - text: 'Las historias de usuario son elementos del Product Backlog que representan '
+    startTime: 0
+    duration: 5
+  - text: "peque\xF1as funcionalidades o componentes del producto, los cuales pueden "
+    startTime: 5
+    duration: 4.8
+  - text: "desarrollarse en pocos d\xEDas."
+    startTime: 9.8
+    duration: 2.44
+  - text: "Estas historias se agrupan en \xE9picas y se mantienen organizadas en
+      listas claras, "
+    startTime: 12.24
+    duration: 6.04
+  - text: accesibles para todo el equipo Scrum, evitando documentos largos o pesados.
+    startTime: 18.28
+    duration: 6.56
+  - text: No se detallan al inicio del proyecto, sino que se elaboran conforme se
+    startTime: 24.84
+    duration: 4.56
+  - text: necesitan, siguiendo el principio Just in time,.
+    startTime: 29.4
+    duration: 5.4
+  - text: "Cada historia de usuario consta de un t\xEDtulo claro, como subir tareas,"
+    startTime: 34.8
+    duration: 5.68
+  - text: "una descripci\xF3n que incluye detalles t\xE9cnicos, de dise\xF1o o flujo"
+    startTime: 40.48
+    duration: 5
+  - text: "y sigue una plantilla est\xE1ndar."
+    startTime: 45.48
+    duration: 2.48
+  - text: "Como tipo de usuario, quiero acci\xF3n o funcionalidad para beneficio
+      o raz\xF3n."
+    startTime: 47.96
+    duration: 7.08
+  - text: Por ejemplo, como cliente, quiero buscar productos
+    startTime: 55.04
+    duration: 3.88
+  - text: "por categor\xEDa para encontrar lo que necesito m\xE1s r\xE1pido."
+    startTime: 58.92
+    duration: 4.24
+  - text: "Adem\xE1s, cada historia especifica a qui\xE9n"
+    startTime: 63.16
+    duration: 3.4
+  - text: "beneficiar\xE1, su prioridad estimada y los criterios de aceptaci\xF3n. "
+    startTime: 66.56
+    duration: 5.2
+  - text: Los desarrolladores son los responsables de dimensionar las historias de
+      usuario.
+    startTime: 71.76
+    duration: 6.08
+  - text: "Comparadas con los requisitos de software, las historias de usuario son
+      m\xE1s ligeras,"
+    startTime: 77.76
+    duration: 6.2
+  - text: "breves, f\xE1ciles de entender y recordar, y no requieren detalles exhaustivos."
+    startTime: 84.04
+    duration: 5
 --- !u!82 &60976277
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1121,7 +1179,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueAudio: {fileID: 8300000, guid: a4ce86bbfe0bbe64b809aab4d6317335, type: 3}
   triggerDistance: 7
-  subtitleLines: []
+  subtitleLines:
+  - text: En Scrum, el incremento representa el resultado concreto del trabajo
+    startTime: 0
+    duration: 4.16
+  - text: realizado durante un sprint.
+    startTime: 4.16
+    duration: 2.08
+  - text: "Es una versi\xF3n del producto que est\xE1 completamente funcional, "
+    startTime: 6.24
+    duration: 3.6
+  - text: "cumple con la definici\xF3n de hecho y, por tanto, est\xE1 lista para
+      ser utilizada,"
+    startTime: 9.84
+    duration: 5.64
+  - text: incluso si no se entrega de inmediato al cliente.
+    startTime: 15.48
+    duration: 3.08
+  - text: Este incremento es acumulativo.
+    startTime: 18.56
+    duration: 2.16
+  - text: Cada nueva entrega se construye sobre las anteriores,
+    startTime: 20.72
+    duration: 3.28
+  - text: agregando valor de forma continua y mejorando el producto progresivamente.
+    startTime: 24
+    duration: 4.64
+  - text: "Aunque pueden generarse en m\xFAltiples incrementos dentro de un mismo
+      sprint, "
+    startTime: 28.64
+    duration: 4.64
+  - text: al menos uno debe estar finalizado al cierre del mismo.
+    startTime: 33.28
+    duration: 4.08
+  - text: Durante la sprint review, estos incrementos se presentan
+    startTime: 37.36
+    duration: 2.88
+  - text: "a los interesados para su inspecci\xF3n, validaci\xF3n y retroalimentaci\xF3n,"
+    startTime: 40.24
+    duration: 5.2
+  - text: "lo que facilita la adaptaci\xF3n futura del producto. "
+    startTime: 45.44
+    duration: 3.04
+  - text: "Adem\xE1s, Scrum promueve que los equipos puedan liberar el incremento
+      cuando lo"
+    startTime: 48.48
+    duration: 4.68
+  - text: deseen sin necesidad de esperar al final del sprint, lo que refuerza la
+      agilidad,
+    startTime: 53.16
+    duration: 5.36
+  - text: "la entrega continua y la capacidad de responder r\xE1pidamente a los cambios
+      del "
+    startTime: 58.52
+    duration: 4.56
+  - text: mercado o a las necesidades del cliente.
+    startTime: 63.08
+    duration: 5
 --- !u!82 &752263981
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1744,7 +1858,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueAudio: {fileID: 8300000, guid: e4fe6f4abac7d044d809fbd1c926f428, type: 3}
   triggerDistance: 7
-  subtitleLines: []
+  subtitleLines:
+  - text: "Las \xE9picas son aquellas grandes funcionalidades o m\xF3dulos dentro"
+    startTime: 0
+    duration: 4.4
+  - text: del producto que, debido a su envergadura, no pueden completarse en un
+      solo sprint.
+    startTime: 4.4
+    duration: 6.2
+  - text: "Son tan amplias que requieren ser desglosadas en historias de usuario
+      m\xE1s"
+    startTime: 10.6
+    duration: 4.84
+  - text: "peque\xF1as, las cuales se pueden abordar a lo largo de varios sprints."
+    startTime: 15.44
+    duration: 5.2
+  - text: "Esta divisi\xF3n permite que el equipo trabaje de manera m\xE1s eficiente
+      y pueda"
+    startTime: 20.64
+    duration: 5.04
+  - text: 'avanzar de forma progresiva hacia el objetivo final. '
+    startTime: 25.68
+    duration: 5
 --- !u!82 &1143058747
 AudioSource:
   m_ObjectHideFlags: 0
