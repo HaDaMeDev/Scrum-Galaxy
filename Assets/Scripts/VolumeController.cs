@@ -115,7 +115,7 @@ public class VolumeController : MonoBehaviour, IPointerClickHandler
             Debug.LogError("No se puede actualizar texto: VolumeText es nulo");
             return;
         }
-        volumeText.text = "Volumen: " + Mathf.RoundToInt(currentVolume * 100) + "%";
+        volumeText.text =  Mathf.RoundToInt(currentVolume * 100) + "%";
     }
 
     // Para cambios manuales en el Slider
