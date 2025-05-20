@@ -8,7 +8,7 @@ public class ControlsDisplay : MonoBehaviour
     public KeyCode toggleKey = KeyCode.F1;
 
     [Tooltip("Color de fondo del panel")]
-    public Color backgroundColor = new Color(0, 0, 0, 1f); // Fondo negro opaco
+    public Color backgroundColor = new Color(0, 0, 0, 0f); // Fondo negro opaco
 
     [Tooltip("Color del texto")]
     public Color textColor = Color.white;
