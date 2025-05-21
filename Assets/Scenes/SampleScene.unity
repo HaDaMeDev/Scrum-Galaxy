@@ -1140,7 +1140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2e6bd857106dd4181dac0b3dd75bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: "\xA1Hola, soy un NPC1!"
+  dialogueText: Artefactos
   dialogueUI: {fileID: 3621306}
   newSceneName: Mundo4
 --- !u!1 &778490667
@@ -2713,7 +2713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2e6bd857106dd4181dac0b3dd75bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: "\xA1Hola, soy un NPC3!"
+  dialogueText: Roles de Scrum
   dialogueUI: {fileID: 3621306}
   newSceneName: Mundo2
 --- !u!1 &1778043284
@@ -3213,7 +3213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2e6bd857106dd4181dac0b3dd75bbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: "\xA1Hola, soy un NPC2!"
+  dialogueText: Eventos / ceremonias
   dialogueUI: {fileID: 3621306}
   newSceneName: Mundo3
 --- !u!1 &1972093652
