@@ -3360,6 +3360,10 @@ MonoBehaviour:
     keyIcon: {fileID: 21300000, guid: 48c1ee20d02026a4bbd29a925b5ae4c0, type: 3}
   - action: Salir
     keyIcon: {fileID: 21300000, guid: a51aac4521ec79b4f99279d63e8c4d78, type: 3}
+  - action: Bajar Volumen
+    keyIcon: {fileID: 21300000, guid: 3c477db1ce513e54c828b3ceeb5caf46, type: 3}
+  - action: Subir Volumen
+    keyIcon: {fileID: 21300000, guid: bffdf8cbd8232a14c9e2eb0ebe93c6c4, type: 3}
 --- !u!114 &1353167872
 MonoBehaviour:
   m_ObjectHideFlags: 0

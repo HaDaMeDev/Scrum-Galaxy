@@ -1329,7 +1329,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1319597447
+--- !u!114 &1319597446
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1365,6 +1365,10 @@ MonoBehaviour:
     keyIcon: {fileID: 21300000, guid: 48c1ee20d02026a4bbd29a925b5ae4c0, type: 3}
   - action: Salir
     keyIcon: {fileID: 21300000, guid: a51aac4521ec79b4f99279d63e8c4d78, type: 3}
+  - action: Bajar Volumen
+    keyIcon: {fileID: 21300000, guid: 3c477db1ce513e54c828b3ceeb5caf46, type: 3}
+  - action: Subir Volumen
+    keyIcon: {fileID: 21300000, guid: bffdf8cbd8232a14c9e2eb0ebe93c6c4, type: 3}
 --- !u!1 &1422005697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,7 +1548,7 @@ PrefabInstance:
       addedObject: {fileID: 1319597443}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ddd9fb3b7fec5a446841a2507b5d90dc, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1319597447}
+      addedObject: {fileID: 1319597446}
   m_SourcePrefab: {fileID: 100100000, guid: ddd9fb3b7fec5a446841a2507b5d90dc, type: 3}
 --- !u!1 &1608582155
 GameObject:
